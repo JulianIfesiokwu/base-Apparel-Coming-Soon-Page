@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    /* --Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    --Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+    /* Font Weights */
+    --fw-1: 300;
+    --fw-2: 400;
+    --fw-3: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto auto;
+}
+
+.logo {
+    grid-column: 1 / span 1;
+}
+
+.email {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+}
+
+.image {
+    grid-column: 2 / span 3;
+}
