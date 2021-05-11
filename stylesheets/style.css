@@ -25,6 +25,7 @@
     grid-template-columns: 60% 40%;
     grid-template-rows: auto auto auto auto;
     background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-image: url('/images/bg-pattern-desktop.svg');
 }
 
 .logo {
@@ -42,7 +43,7 @@
 }
 
 .logo, .email {
-    padding: 5rem;
+    padding: 2rem 5rem 4rem 4rem;
 }
 
 .we {
@@ -54,4 +55,40 @@
 .bold-text {
     font-size: 7rem;
     font-weight: 600;
+}
+
+.update-text {
+    width: 50%;
+    color: var(--Desaturated-Red);
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.email-bar {
+    padding: 1.1rem;
+    border-radius: 30px;
+    width: 50%;
+    background: transparent;
+    border: 1px solid var(--Desaturated-Red);  
+}
+
+form button {
+    float: right;
+    width: 10%;
+    padding: 0.9rem;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    right: 395px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: var(--Desaturated-Red)
+}
+
+#error, .exclamation {
+    display: none;
 }
