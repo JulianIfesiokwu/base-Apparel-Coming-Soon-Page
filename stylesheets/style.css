@@ -26,6 +26,7 @@
     grid-template-rows: auto auto auto auto;
     background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     background-image: url('/images/bg-pattern-desktop.svg');
+    /* grid-column-gap: 10%; */
 }
 
 .logo {
@@ -40,6 +41,11 @@
 .image {
     grid-column: 2 / span 3;
     grid-row: 1 / span 5;
+}
+
+.display-image {
+    width: 100%;
+    height: 98vh;
 }
 
 .logo, .email {
@@ -61,28 +67,40 @@
     width: 50%;
     color: var(--Desaturated-Red);
     line-height: 2rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.input-container {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid var(--Desaturated-Red);
+    outline: none;
 }
 
 .email-bar {
     padding: 1.1rem;
     border-radius: 30px;
-    width: 50%;
-    background: transparent;
-    border: 1px solid var(--Desaturated-Red);  
+    font-size: 16px;
+    border: none;
+    width: 60%;
+    outline: none;
 }
 
-form button {
+.input-container button {
     float: right;
-    width: 10%;
+    width: 20%;
     padding: 0.9rem;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
     border-radius: 30px;
-    position: relative;
-    right: 395px;
-    bottom: 0;
+    outline: none;
     cursor: pointer;
+    box-shadow: 5px 5px 8px 5px #f1f1f1;
+    position: relative;
+    bottom: 2px;
 }
 
 ::placeholder {
@@ -91,4 +109,75 @@ form button {
 
 #error, .exclamation {
     display: none;
+    color: var(--Soft-Red);
 }
+
+.exclamation {
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+#error {
+    margin-top: 1rem;
+}
+
+.red-border {
+    border: 2px solid var(--Soft-Red);
+}
+
+@media only screen and (max-width: 425px) {
+    
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .logo {
+        grid-column: 1 / span 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 2rem 2rem;
+    }
+
+    .image {
+        grid-column: 1 / span 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .email {
+        grid-column: 1 / span 1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .display-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .we {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .bold-text {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .update-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .email-container, .input-container {
+        width: 100%;
+    }
+  }
